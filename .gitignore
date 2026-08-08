@@ -1,0 +1,14 @@
+.DS_Store
+.claude/
+CLAUDE.local.md
+output/
+colmap_output/
+*.ply
+*.pkl
+*.db
+images/
+__pycache__/
+*.pyc
+venv/
+.venv/
+weights/
