@@ -2,7 +2,7 @@
 
 Run from project root:
     python3 demo_features.py
-    python3 demo_features.py --img1 images/0005.jpg --img2 images/0006.jpg
+    python3 demo_features.py --img1 samples/0002.jpg --img2 samples/0003.jpg
 """
 
 from __future__ import annotations
@@ -18,8 +18,8 @@ from sfm.io_utils import load_image
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Visualize SIFT matches between two images")
-    parser.add_argument("--img1", default="images/0000.jpg")
-    parser.add_argument("--img2", default="images/0001.jpg")
+    parser.add_argument("--img1", default="samples/0000.jpg")
+    parser.add_argument("--img2", default="samples/0001.jpg")
     parser.add_argument("--max-dim", type=int, default=1024,
                         help="Resize so longest side == max_dim (speeds up SIFT)")
     parser.add_argument("--ratio", type=float, default=0.75,

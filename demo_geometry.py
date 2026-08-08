@@ -4,7 +4,7 @@ implementation against cv2.findFundamentalMat as a sanity check.
 
 Run from project root:
     python3 demo_geometry.py
-    python3 demo_geometry.py --img1 images/0010.jpg --img2 images/0011.jpg
+    python3 demo_geometry.py --img1 samples/0002.jpg --img2 samples/0003.jpg
 """
 
 from __future__ import annotations
@@ -26,8 +26,8 @@ from sfm.io_utils import estimate_intrinsics, load_image
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--img1", default="images/0000.jpg")
-    parser.add_argument("--img2", default="images/0001.jpg")
+    parser.add_argument("--img1", default="samples/0000.jpg")
+    parser.add_argument("--img2", default="samples/0001.jpg")
     parser.add_argument("--max-dim", type=int, default=1024)
     parser.add_argument("--ratio", type=float, default=0.75)
     parser.add_argument("--ransac-thresh", type=float, default=1.0,
